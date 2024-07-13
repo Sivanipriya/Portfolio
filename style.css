@@ -1,0 +1,760 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root {
+    --bg-color: #191f36;
+    --snd-bf-color: #262B40;
+    --text-color: #fff;
+    --main-color: #59B2F4;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.head {
+    position: fixed;
+    left: 0;
+    top: 0;
+    border: 1px solid rgb(214, 205, 205);
+    width: 100%;
+    padding: 2rem 9%;
+    display: flex;
+    background-color: var(--bg-color);
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.name {
+    width: 20%;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    cursor: default;
+    font-weight: 700;
+}
+
+.list {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.list a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+}
+
+.active-link {
+    position: relative;
+    color: var(--main-color); /* Ensure active link is highlighted */
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    width: 60%; /* Adjust the width as needed */
+    height: 2px; /* Adjust the height as needed */
+    background-color: var(--main-color); /* Underline color */
+    bottom: -5px; /* Position it just below the text */
+    left: 20%; /* Center the underline */
+    transition: width 0.3s; /* Smooth transition */
+}
+
+
+
+.list a:hover,
+.list a:active {
+    color: white;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none; /* Initially hidden, shown based on media queries */
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.home-content{
+    margin-right:80px;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-img img {
+    margin-left:2vw;
+    width: 25vw;
+    animation: floatimage 4s ease-in-out infinite;
+    border-radius: 50%;
+}
+
+@keyframes floatimage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.links a:hover {
+    background-color: var(--main-color);
+    color: var(--snd-bf-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--snd-bf-color);
+    flex-wrap: wrap; /* Added to ensure wrapping */
+}
+
+.img img {
+    width: 30vw;
+    height: auto; /* Changed from fixed height to auto */
+}
+
+.about .heading {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom:3px;
+}
+
+.about-content {
+    width: 45vw;
+    min-width: 300px; /* Added minimum width */
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.services .heading {
+    margin-bottom: 5rem;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.services-container .services-box {
+    flex: 1 1 10rem;
+    background-color: var(--snd-bf-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: 0.5s ease;
+}
+
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.services-box i {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.services-box h3 {
+    font-size: 2.6rem;
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.projects {
+    background-color: var(--snd-bf-color);
+}
+
+.projects .heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+
+.projects h2 {
+    margin-bottom: 4rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.projects-container .projects-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.projects-box img {
+    width: 100%;
+}
+
+.projects-box .projects-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.projects-box:hover .projects-layer {
+    transform: translateY(0);
+}
+
+.projects-layer h4 {
+    font-size: 3rem;
+}
+
+.projects-layer p {
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+}
+
+.projects-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
+.projects-layer a i {
+    font-size: 2rem;
+    color: var(--snd-bf-color);
+}
+
+.contact .heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.contact h2{
+    margin-bottom: 3rem;
+}
+
+.contact form{
+    max-width:70rem;
+    margin:1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width:100%;
+    padding:1.5rem;
+    font-size: 1.6rem;
+    color:var(--text-color);
+    border-radius: .8rem;
+    margin:.7rem 0;
+}
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize:none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:2rem 9%;
+    background-color: var(--snd-bf-color);
+}
+
+.footer-text{
+    font-size: 1.6rem;
+}
+
+.footer-icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding:.8rem 1rem;
+    background-color: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-icon a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-icon a i{
+    font-size: 2.4rem;
+    color:var(--snd-bf-color)
+}
+
+
+
+
+
+
+.education {
+    padding: 7% 9%;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.education .heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.education .heading span {
+    color: var(--main-color);
+}
+
+
+
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    right: -1vw;
+    background-color: var(--main-color);
+    border: .5vw solid var(--snd-bf-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--main-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -6px;
+}
+
+
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+.timeline-item {
+    padding: 20px 30px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    display: flex; /* Ensuring items are aligned in a flex container */
+    align-items: flex-start; /* Align items to the top */
+    z-index: 2; /* Ensure items are above the timeline::after pseudo-element */
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -19px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: var(--snd-bf-color);
+    position: relative;
+    border-radius: 6px;
+    z-index: 3; /* Ensure content is above .timeline-item */
+}
+
+.timeline-content h3 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.timeline-content h4 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    color: var(--main-color);
+}
+
+.timeline-content p {
+    font-size: 1.6rem;
+    color: #eee;
+}
+#shadow-host-companion {
+    display: none;
+}
+
+
+
+@media(max-width:1200px) {
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:991px)
+{
+    .head{
+        padding:2rem 3%;
+    }
+
+    section{
+        padding:10rem 3%;
+    }
+
+    .projects{
+        padding-bottom: 2rem;
+    }
+
+    .contact{
+        min-height: auto;
+    }
+
+    .footer{
+        padding:2rem 3%;
+    }
+}
+
+    @media(max-width:768px)
+    {
+        #menu-icon{
+            display: block;
+            
+        }
+
+      
+
+        .list{
+            position: absolute;
+            top:100%;
+            left:0;
+            width:100%;
+            padding:1rem 5%;
+            background-color: var(--bg-color);
+            border-top:.1rem solid rgba(0,0,0,.2);
+            box-shadow: 0.5rem 1rem rgba(0,0,0,.2);
+            display: none;
+        }
+        .list .active{
+            display: block;
+        }
+        .list a{
+            display: block;
+            font-size: 2rem;
+            margin:3rem 0;
+        }
+        .active-link::after {
+    content: '';
+    position: absolute;
+    width: 20%; /* Adjust the width as needed */
+    height: 2px; /* Adjust the height as needed */
+    background-color: var(--main-color); /* Underline color */
+    bottom: -5px; /* Position it just below the text */
+    left: 40%; /* Center the underline */
+    transition: width 0.3s; /* Smooth transition */
+}
+
+        .home{
+            flex-direction: column;
+        }
+
+        .home-content{
+            order:2;
+        }
+
+        .home-content h3{
+            font-size: 2.6rem;
+        }
+
+        .home-content h2{
+            font-size: 5rem;
+        }
+
+        .home-img img{
+            width:90vw;
+            margin-top:4rem;
+        }
+
+        .about{
+            flex-direction: column;
+        }
+
+        .img img{
+            width:90vw;
+            margin-top:4rem;
+        }
+
+        .projects h2{
+            margin-bottom: 3rem;
+        }
+
+        .projects-container{
+            grid-template-columns: repeat(2,1fr);
+
+        }
+      /* Other existing styles */
+        
+            /* Show the menu when active */
+            .list.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 1rem 5%;
+                background-color: var(--bg-color);
+                border-top: .1rem solid rgba(0, 0, 0, .2);
+                box-shadow: 0.5rem 1rem rgba(0, 0, 0, .2);
+            }
+        
+            /* Hide initially */
+            .list {
+                display: none;
+            }
+        
+            /* Adjust the links inside the menu */
+            .list a {
+                display: block;
+                font-size: 2rem;
+                margin: 3rem 0;
+                text-align: center; /* Center align menu links */
+            }
+        
+        
+    }
+    
+    @media(max-width:617px) {
+
+        .projects-container{
+            grid-template-columns: 1fr;
+        }
+
+        .home-img img{
+            width:80vw;
+            margin-top: 8rem;
+        }
+
+        .img img{
+            width:100vw;
+            margin-top:4rem;
+        }
+    }
+
+    @media(max-width:450px)
+    {
+        html{
+            font-size:50%;
+        }
+
+        .contact form .inout-box input{
+            width:100%;
+        }
+    }
+    @media (max-width: 991px) {
+        .timeline-item {
+            width: 100%;
+        }
+    
+        .timeline-item:nth-child(even),
+        .timeline-item:nth-child(odd) {
+            left: 0; 
+            transform: translateX(0);
+        }
+    
+        .timeline-item::after {
+            display: none; 
+        }
+    }
+    
+    @media (max-width: 579px) {
+        .timeline {
+            padding: 0 20px; /* Add padding to timeline for smaller screens */
+        }
+    
+        .timeline-item {
+            width: 100%; /* Adjust width to full width on smaller screens */
+        }
+    
+        .timeline-item::after {
+            right: -13px; /* Adjust position of the circle for better alignment */
+            top: 50%; /* Center the circle vertically */
+            transform: translateY(-50%); /* Adjust for centering */
+        }
+    }
+
+    @media (max-width: 973px) {
+        .timeline-item {
+            width: 100%; /* Make timeline items full width */
+            display: flex;
+            justify-content: center; /* Center-align timeline items */
+        }
+    
+        .timeline-content {
+            text-align: left; /* Ensure text content is left-aligned */
+        }
+    
+        .timeline-item:nth-child(even) .timeline-content {
+            order: -1; /* Reverse order for even items to maintain correct order */
+        }
+    
+        .timeline-item::after {
+            right: -13px; /* Adjust position of the circle for better alignment */
+            top: 50%; /* Center the circle vertically */
+            transform: translateY(-50%); /* Adjust for centering */
+        }
+    }
+    
+    
