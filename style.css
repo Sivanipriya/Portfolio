@@ -125,7 +125,6 @@ span {
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
-    width:100%;
 }
 
 .home-img img {
@@ -575,7 +574,10 @@ span {
             
         }
 
-      
+        .home-content{
+            margin-right:40px;
+        }
+        
 
         .list{
             position: absolute;
