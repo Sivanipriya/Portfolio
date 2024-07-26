@@ -634,15 +634,7 @@ span {
             flex-direction: column;
         }
 
-        .about-content{
-            width:80%;
-            text-align: center;
-        }
-
-        .about-content p{
-          
-            text-align: left;
-        }
+        
         }
         .img img{
             width:90vw;
@@ -687,7 +679,7 @@ span {
             }
         
         
-    }
+    
     
     @media(max-width:617px) {
 
