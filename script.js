@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => 
+    {
     const menu = document.querySelector('#menu-icon');
     const navbar = document.querySelector('.list');
 
@@ -55,5 +56,32 @@ const typed = new Typed('.multiple-text',{
     backDelay:1000,
     loop: true,
 });
+document.getElementById("project-1").addEventListener("click", ()=> {
+    window.location.href = "https://sivanipriya.github.io/Burger-Website-Responsive/";
+});
+
+
+document.getElementById("project-2").addEventListener("click", ()=> {
+    window.location.href = "https://sivanipriya.github.io/Saffron/";
+});
+
+document.getElementById("project-3").addEventListener("click", ()=> {
+    window.location.href = "https://sivanipriya.github.io/NLW-CARE-responsive-website/";
+});
+
+document.getElementById("project-4").addEventListener("click", ()=> {
+    window.location.href = "https://sivanipriya.github.io/Expense_Tracker/";
+});
+
+
+document.getElementById("project-5").addEventListener("click", ()=> {
+    window.location.href = "https://sivanipriya.github.io/StaticYouTubePage/";
+});
+
+
+document.getElementById("project-6").addEventListener("click", ()=> {
+    window.location.href = "https://sivanipriya.github.io/Weather-app-Using-react/";
+});
+
 
 });

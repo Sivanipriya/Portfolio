@@ -203,6 +203,10 @@ span {
     height: auto; /* Changed from fixed height to auto */
 }
 
+#project-1,#project-2,#project-3,#project-4,#project-5,#project6{
+    cursor:pointer;
+}
+
 .about .heading {
     text-align: center;
     font-size: 4.5rem;
