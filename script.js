@@ -44,8 +44,8 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-content,.head',{origin:'top'});
 ScrollReveal().reveal('.home-img, .projects-box, .contact form',{origin:'bottom'});
-ScrollReveal().reveal('.contact h1,.img,.timeline-item',{origin:'left'});
-ScrollReveal().reveal('.contact p, .about-content',{origin:'right'});
+ScrollReveal().reveal('.contact h1,.img,.s1,.s3',{origin:'left'});
+ScrollReveal().reveal('.contact p, .about-content,.s2',{origin:'right'});
 
 
 const typed = new Typed('.multiple-text',{
