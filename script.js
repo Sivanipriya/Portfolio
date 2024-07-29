@@ -79,7 +79,7 @@ document.getElementById("project-5").addEventListener("click", ()=> {
 });
 
 
-document.getElementById("project-6").addEventListener("click", ()=> {
+document.getElementById("project-7").addEventListener("click", ()=> {
     window.location.href = "https://sivanipriya.github.io/Weather-app-Using-react/";
 });
 
