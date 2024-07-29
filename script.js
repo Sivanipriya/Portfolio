@@ -74,9 +74,6 @@ document.getElementById("project-4").addEventListener("click", ()=> {
 });
 
 
-document.getElementById("project-5").addEventListener("click", ()=> {
-    window.location.href = "https://sivanipriya.github.io/StaticYouTubePage/";
-});
 
 
 document.getElementById("project-7").addEventListener("click", ()=> {
