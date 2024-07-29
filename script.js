@@ -60,6 +60,9 @@ document.getElementById("project-1").addEventListener("click", ()=> {
     window.location.href = "https://sivanipriya.github.io/Burger-Website-Responsive/";
 });
 
+document.getElementById("project-7").addEventListener("click", ()=> {
+    window.location.href = "https://sivanipriya.github.io/Weather-app-Using-react/";
+});
 
 document.getElementById("project-2").addEventListener("click", ()=> {
     window.location.href = "https://sivanipriya.github.io/Saffron/";
@@ -76,9 +79,6 @@ document.getElementById("project-4").addEventListener("click", ()=> {
 
 
 
-document.getElementById("project-7").addEventListener("click", ()=> {
-    window.location.href = "https://sivanipriya.github.io/Weather-app-Using-react/";
-});
 
 
 });
