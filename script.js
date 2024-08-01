@@ -65,7 +65,7 @@ document.getElementById("project-7").addEventListener("click", ()=> {
 });
 
 document.getElementById("project-2").addEventListener("click", ()=> {
-    window.location.href = "https://sivanipriya.github.io/Saffron/";
+    window.location.href = "https://sivanipriya.github.io/Saffron-Clone-Website/";
 });
 
 document.getElementById("project-3").addEventListener("click", ()=> {
